@@ -1,6 +1,8 @@
-﻿namespace PersistentDataStructuresLibrary
+﻿using PersistentDataStructuresLibrary.Interfaces;
+
+namespace PersistentDataStructuresLibrary
 {
-    public class PersistentSegmentTree
+    public class PersistentSegmentTree : IPersistentSegmentTree
     {
         private readonly int _numberOfVertexes;
         private readonly TreeNode[] _roots;

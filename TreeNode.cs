@@ -1,10 +1,12 @@
-﻿namespace PersistentDataStructuresLibrary
+﻿using PersistentDataStructuresLibrary.Interfaces;
+
+namespace PersistentDataStructuresLibrary
 {
-    public class TreeNode
+    public class TreeNode : ITreeNode
     {
         public TreeNode? Left { get; set; }
         public TreeNode? Right { get; set; }
-        public int Value;
+        public int Value { get; set; }
 
         public TreeNode()
         {

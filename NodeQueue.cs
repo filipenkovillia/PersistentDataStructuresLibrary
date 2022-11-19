@@ -1,9 +1,11 @@
-﻿namespace PersistentDataStructuresLibrary
+﻿using PersistentDataStructuresLibrary.Interfaces;
+
+namespace PersistentDataStructuresLibrary
 {
-    public class NodeQueue<T>
+    public class NodeQueue<T> : INodeQueue<T>
     {
-        public NodeStack<T> headStack { get; set; }
-        public NodeStack<T> tailStack { get; set; }
+        private NodeStack<T> headStack { get; set; }
+        private NodeStack<T> tailStack { get; set; }
 
         private int count { get; set; }
 
@@ -66,7 +68,7 @@
 
         public bool IsEmpty { get { return count == 0; } }
 
-        public void Clear()
+        private void Clear()
         {
             headStack = new NodeStack<T>();
             tailStack = new NodeStack<T>();

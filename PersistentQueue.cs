@@ -1,14 +1,19 @@
-﻿namespace PersistentDataStructuresLibrary
+﻿using PersistentDataStructuresLibrary.Interfaces;
+
+namespace PersistentDataStructuresLibrary
 {
-    public class PersistentQueue<T>
+    public class PersistentQueue<T> : IPersistentQueue<T>
     {
         // TODO: arrays of queues
         private int _currentVersionsCount;
         private NodeStack<T>[] _headStacks;
         private NodeStack<T>[] _tailStacks;
 
+        public int NumberOfVersions { get; set; }
+
         public PersistentQueue(int versionCount)
         {
+            NumberOfVersions = versionCount;
             _headStacks = new NodeStack<T>[versionCount];
             _tailStacks = new NodeStack<T>[versionCount];
             _currentVersionsCount = 0;

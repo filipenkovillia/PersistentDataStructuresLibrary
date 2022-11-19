@@ -1,6 +1,8 @@
-﻿namespace PersistentDataStructuresLibrary
+﻿using PersistentDataStructuresLibrary.Interfaces;
+
+namespace PersistentDataStructuresLibrary
 {
-    public class NodeStack<T>
+    public class NodeStack<T> : INodeStack<T>
     {
         public int Count { get; private set; }
         public ValueNode<T>? Head { get; set; }

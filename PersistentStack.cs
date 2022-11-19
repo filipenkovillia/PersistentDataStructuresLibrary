@@ -1,6 +1,8 @@
-﻿namespace PersistentDataStructuresLibrary
+﻿using PersistentDataStructuresLibrary.Interfaces;
+
+namespace PersistentDataStructuresLibrary
 {
-    public class PersistentStack<T>
+    public class PersistentStack<T> : IPersistentStack<T>
     {
         private int _currentVersionsCount;
         private readonly ValueNode<T>[] _versionHeads;
